@@ -18,7 +18,7 @@ const readFile = (path) => {
     })}
 
 
-    const server = http.createServer(async (request, response) => {
+    const serverPromis = http.createServer(async (request, response) => {
 
         switch (request.url) {
             case'/home': {
@@ -49,4 +49,4 @@ const readFile = (path) => {
 
     })
 
-    server.listen(3003)
+    serverPromis.listen(3003)

@@ -1,0 +1,20 @@
+const express = require('express')
+const app = express()
+const port = 3005
+
+app.get('/', (req, res) => {
+    const a =4
+    if(a>5){res.send('OK!')}
+        else {res.send('Hello World!')
+        }
+})
+app.get('/samurais', (req, res) => {
+    res.send('Hello Samurai  Edward!')
+})
+app.post('/samurais', (req, res) => {
+    res.send('We have created samurai!')
+})
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+})
